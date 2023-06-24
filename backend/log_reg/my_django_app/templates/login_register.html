@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>login and Register</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid p-5 d-flex justify-content-around align-items-center">
+            <!-- register form -->
+            <form action="" class="p-3 mb-5 shadow-lg bg-body-tertiary rounded text-primary bg-body-secondary d-flex flex-md-column justify-content-around align-items-center"
+            style="height: 75%; width: 25%;">
+                <h2 class="mb-5">Register</h2>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">First Name:</label>
+                    <input type="text" name="first_name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last Name:</label>
+                    <input type="text" name="last_name"  class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label  class="form-label">Email:</label>
+                    <input type="email" name="email" class="form-control">
+                    <div class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+            <!-- login form -->
+            <form action="post" class="p-3 mb-2 mb-5 shadow-lg bg-body-tertiary text-success bg-body-secondary d-flex flex-column justify-content-around align-items-center"
+            style="height: 75%; width: 25%;">
+                <h2 class="mb-5">Login</h2>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label  class="form-label">Email:</label>
+                    <input type="email" name="email" class="form-control">
+                    <div class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
